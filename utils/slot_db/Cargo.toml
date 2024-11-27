@@ -23,6 +23,7 @@ default = ["parity_backend", "compress", "msgpack_codec"]
 
 parity_backend = ["vsdb/parity_backend"]
 rocks_backend = ["vsdb/rocks_backend"]
+sled_backend = ["vsdb/sled_backend"]
 
 compress = ["vsdb/compress"]
 

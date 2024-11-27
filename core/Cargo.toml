@@ -20,6 +20,7 @@ threadpool = { workspace = true } # used in a background cleaner
 
 parity-db = { workspace = true, optional = true }
 rocksdb = { workspace = true, optional = true }
+sled = { workspace = true, optional = true }
 
 [dev-dependencies]
 msgpack = { workspace = true }
@@ -31,6 +32,7 @@ default = ["compress", "parity_backend"]
 
 parity_backend = ["parity-db"]
 rocks_backend = ["rocksdb"]
+sled_backend = ["sled"]
 
 compress = ["rocksdb?/zstd"]
 

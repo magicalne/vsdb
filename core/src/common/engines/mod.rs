@@ -7,6 +7,9 @@ mod rocks_backend;
 #[cfg(feature = "parity_backend")]
 mod parity_backend;
 
+#[cfg(feature = "sled_backend")]
+mod sled_backend;
+
 /////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////
 
@@ -21,6 +24,12 @@ pub(crate) use parity_backend::ParityEngine as ParityDB;
 
 #[cfg(feature = "parity_backend")]
 type EngineIter = parity_backend::ParityIter;
+
+#[cfg(feature = "sled_backend")]
+pub(crate) use sled_backend::SledEngine as SledDB;
+
+#[cfg(feature = "sled_backend")]
+type EngineIter = sled_backend::SledIter;
 
 /////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////
